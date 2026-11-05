@@ -48,11 +48,12 @@ object BatteryLog {
     /** Two samples further apart than this mean the Karoo was off in between. */
     const val GAP_MS = 25 * 60_000L
 
-    @Synchronized fun read(ctx: Context): History {
+    @Synchronized fun read(ctx: Context): History = parse(file(ctx).let { if (it.exists()) it.readLines() else emptyList() })
+
+    fun parse(lines: List<String>): History {
         val samples = mutableListOf<Sample>()
         val marks = mutableListOf<Pair<Long, Boolean>>()
-        val f = file(ctx)
-        if (f.exists()) for (line in f.readLines()) {
+        for (line in lines) {
             val p = line.split(',')
             val t = p.getOrNull(0)?.toLongOrNull() ?: continue
             when (p.getOrNull(1)) {

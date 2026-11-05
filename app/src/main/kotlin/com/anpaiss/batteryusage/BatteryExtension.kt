@@ -15,7 +15,7 @@ import io.hammerhead.karooext.models.RideState
  * 10 min when nothing does (so a gap in the chart means the Karoo was off), and the rides.
  * It only listens to broadcasts the system sends anyway: no polling of its own beyond the 10 min.
  */
-class BatteryExtension : KarooExtension("batteryusage", "0.1") {
+class BatteryExtension : KarooExtension("batteryusage", BuildConfig.VERSION_NAME) {
 
     private lateinit var karoo: KarooSystemService
     private val main = Handler(Looper.getMainLooper())

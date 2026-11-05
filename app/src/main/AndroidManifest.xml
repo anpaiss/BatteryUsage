@@ -7,6 +7,10 @@
         android:icon="@drawable/ic_battery"
         android:label="@string/app_name">
 
+        <meta-data
+            android:name="io.hammerhead.karooext.MANIFEST_URL"
+            android:value="https://github.com/anpaiss/BatteryUsage/releases/latest/download/manifest.json" />
+
         <activity
             android:name=".MainActivity"
             android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar"
