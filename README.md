@@ -65,3 +65,5 @@ BatteryUsage is free and open source, and will stay that way. If it helped, you 
 ## License
 
 MIT, see [LICENSE](LICENSE).
+
+If you build on this code, or on its ideas, a mention is much appreciated: a link to this repository is enough.
