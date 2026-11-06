@@ -2,8 +2,6 @@
 
 # BatteryUsage
 
-> **In testing** — not released yet.
-
 The Karoo's battery at a glance, on the Hammerhead Karoo: how it went over the last 24 hours or 7 days with your rides on it, what each ride used per hour, and Android's own list of the battery used by each app, the screen, the GPS and every extension.
 
 No permissions, no network, nothing to set up: install it and it starts recording.
@@ -57,6 +55,13 @@ No permissions, no network, no account. The battery history stays on the Karoo.
 - [PoiAhead](https://github.com/anpaiss/PoiAhead), [BigFields](https://github.com/anpaiss/BigFields), [AutoLoopKaroo](https://github.com/anpaiss/AutoLoopKaroo), [KarooAxsRatio](https://github.com/anpaiss/KarooAxsRatio)
 
 All of them on [lagorai.bike/extensions](https://lagorai.bike/extensions/).
+
+## Is it safe?
+
+- The code is all here, open source.
+- `BatteryUsage.apk` 1.0.0 on [VirusTotal](https://www.virustotal.com/gui/file/794da24f396e6f2fda21f1b7562e01c05de3b77c4ff7765ff5d4acce50d8896d): none of the 67 antivirus engines flag it.
+- Its SHA-256 is `794da24f396e6f2fda21f1b7562e01c05de3b77c4ff7765ff5d4acce50d8896d`; compare it with the file you downloaded (`certutil -hashfile BatteryUsage.apk SHA256` on Windows, `sha256sum BatteryUsage.apk` elsewhere).
+- The APK is built by GitHub Actions from the tagged source, with a signed provenance; the release notes link its VirusTotal report. Check the provenance with `gh attestation verify BatteryUsage.apk -R anpaiss/BatteryUsage`.
 
 ## Support
 
